@@ -17,13 +17,15 @@ body {
 }
 
 header {
-    background-color: rgb(190, 191, 241);
-    color: black;
+    background-color: #A60000;
+    color: #3b0000;
     padding: 10px;
 }
 
+
+
 #menu {
-    background-color: #333;
+    background-color: #333333;
     color: white;
     padding: 10px;
     display: flex;
@@ -33,13 +35,6 @@ header {
 
 #menu-icon {
     cursor: pointer;
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
 }
 
 #menu-links {
@@ -97,7 +92,7 @@ header h1 {
     display: flex;
 }
 
-.perquisar {
+.pesquisar {
     margin-right: -50px;
 }
 
@@ -117,7 +112,7 @@ header h1 {
 
 #destino-em-massa {
     margin-left: 60px;
-    display: none;
+    
     position: fixed;
 }
 

@@ -14,16 +14,15 @@
 
     <nav id="menu">
         <div id="menu-icon">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+            <label for="menu-bars"><i class="fa-solid fa-bars"></i></label>
         </div>
         <ul id="menu-links">
-            <li><a href="#">HOME</a></li>
-            <li><a href="inventario.html">TINTAS DISPONIVEIS</a></li>
-            <li><a href="nova-tinta.html">ADICIONAR NOVA TINTA</a></li>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#tintas-disponiveis">TINTAS DISPONIVEIS</a></li>
+            <li><a href="#adicionar-tinta">ADICIONAR NOVA TINTA</a></li>
         </ul>
     </nav>
+    
 
     <main>
         <section id="tintas-disponiveis">
@@ -41,8 +40,8 @@
             </div>        
 
             <div class="acoes-em-massa">
-                <button id="excluir-selecionadas" style="display: none;"><img src="../svg/trashcan1_114647.svg" alt="x"></button>
-                <button id="mover-selecionadas" style="display: none;"><img src="../svg/folder_move_outline_icon_139530.svg" alt="m"></button>
+                <button id="excluir-selecionadas"><img src="../svg/trashcan1_114647.svg" alt="x"></button>
+                <button id="mover-selecionadas"><img src="../svg/folder_move_outline_icon_139530.svg" alt="m"></button>
             </div>
 
             <select id="destino-em-massa" name="destino-em-massa">
@@ -55,7 +54,7 @@
             <table id="tinta-table">
                 <thead>
                     <tr>
-                        <th><input type="checkbox" id="marcar-desmarcar-todos"></th>
+                        <th><input type="checkbox" id="marcar-desmarcar-todas"></th>
                         <th>Nome</th>
                         <th>Quantidade</th>
                         <th>Localização</th>
