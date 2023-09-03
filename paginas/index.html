@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Tintas</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Gerenciador de Tintas</h1>
+    </header>
+
+    <nav id="menu">
+        <div id="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul id="menu-links">
+            <li><a href="#">HOME</a></li>
+            <li><a href="inventario.html">TINTAS DISPONIVEIS</a></li>
+            <li><a href="nova-tinta.html">ADICIONAR NOVA TINTA</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="tintas-disponiveis">
+            <h2>Tintas Disponíveis</h2>
+
+            <div class="contenedor">
+                <div class="pesquisar">
+                    <label for="pesquisar-tinta"><i class="fa-solid fa-magnifying-glass"></i></label>
+                    <input type="text" id="pesquisar-tinta" placeholder="Buscar Tinta">
+                </div>
+                <div class="filtrar">
+                    <label for="filtrar-tinta"><i class="fa-solid fa-filter"></i></label>
+                    <input type="text" id="filtrar-tinta" placeholder="Filtrar Localização">
+                </div>
+            </div>        
+
+            <div class="acoes-em-massa">
+                <button id="excluir-selecionadas" style="display: none;"><img src="../svg/trashcan1_114647.svg" alt="x"></button>
+                <button id="mover-selecionadas" style="display: none;"><img src="../svg/folder_move_outline_icon_139530.svg" alt="m"></button>
+            </div>
+
+            <select id="destino-em-massa" name="destino-em-massa">
+                <option value="carrossel">Carrossel</option>
+                <option value="garra">Garra</option>
+                <option value="mesa-termica">Mesa Térmica</option>
+                <option value="prateleira">Prateleira</option>
+            </select>        
+        
+            <table id="tinta-table">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" id="marcar-desmarcar-todos"></th>
+                        <th>Nome</th>
+                        <th>Quantidade</th>
+                        <th>Localização</th>
+                        <th>Data de Aquisição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="selecionar-tinta"></td>
+                        <td>Bahamas</td>
+                        <td>15 kg</td>
+                        <td>Prateleira</td>
+                        <td>11/08/2023</td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="checkbox" class="selecionar-tinta"></td>
+                        <td>Chic Red</td>
+                        <td>10 kg</td>
+                        <td>Garra</td>
+                        <td>11/08/2023</td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="checkbox" class="selecionar-tinta"></td>
+                        <td>Garoa</td>
+                        <td>10 kg</td>
+                        <td>Garra</td>
+                        <td>11/08/2023</td>
+                    </tr>
+                    <!-- Repita o mesmo formato para outros itens de tinta -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="adicionar-tinta">
+            <h2>Adicionar Nova Tinta</h2>
+            <form id="add-tinta-form">
+                <label for="nome-tinta">Nome da Tinta:</label>
+                <input type="text" id="nome-tinta" name="nome-tinta" required>
+        
+                <label for="quantidade">Quantidade (kg):</label>
+                <input type="number" id="quantidade" name="quantidade" required>
+        
+                <label for="data-aquisicao">Data de Aquisição:</label>
+                <input type="date" id="data-aquisicao" name="data-aquisicao" required>
+
+                <label for="localizacao">Localização:</label>
+                <select id="localizacao" name="localizacao">
+                    <option value="prateleira">Prateleira</option>
+                    <option value="carrossel">Carrossel</option>
+                    <option value="garra">Garra</option>
+                    <option value="mesa-termica">Mesa Térmica</option>
+                </select>
+
+                <button type="submit" id="adicionar-tinta-button">Adicionar Tinta</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Conteúdo do rodapé aqui, se necessário -->
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html> 

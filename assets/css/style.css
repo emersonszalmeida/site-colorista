@@ -1,0 +1,188 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 768px) {
+    #tinta-table {
+        font-size: 2.5vw; /* Reduza o tamanho da fonte */
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: rgb(190, 191, 241);
+    color: black;
+    padding: 10px;
+}
+
+#menu {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu-icon {
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+#menu-links {
+    list-style: none;
+    display: none;
+}
+
+#menu-links.active {
+    display: block;
+}
+
+#menu-links li {
+    margin: 10px 0;
+}
+
+#menu-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+    #menu-links {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #menu-links.active {
+        display: block;
+    }
+
+    #menu-links li {
+        margin: 20px 0;
+    }
+
+    #menu-icon.active .bar {
+        background-color: #ccc;
+    }
+}
+
+
+
+header h1 {
+    font-size: 5vw;
+    
+    text-align: center;
+}
+
+.contenedor {
+    display: flex;
+}
+
+.perquisar {
+    margin-right: -50px;
+}
+
+.acoes-em-massa {
+    position: fixed;
+    display: flex;
+    align-items: center;
+}
+
+.acoes-em-massa button {
+    margin-right: 10px;
+}
+
+.acoes-em-massa img {
+    width: 3.5vw;
+}
+
+#destino-em-massa {
+    margin-left: 60px;
+    display: none;
+    position: fixed;
+}
+
+main {
+    padding-top: 0px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+.contenedor input[type="text"] {
+    width: 60%;
+    padding: 3px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#tinta-table {
+    width: 100%;
+    border-collapse: collapse; /* Combina as bordas das células */
+    margin-top: 35px;
+}
+
+#tinta-table th,
+#tinta-table td {
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+}
+
+#tinta-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+#tinta-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Linhas pares com fundo cinza claro */
+}
+
+#tinta-table td button,
+#tinta-table td select {
+    display: block;
+    margin: 0 auto;
+}
+
+#tinta-table td button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#tinta-table td select {
+    width: 100px;
+    padding: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
